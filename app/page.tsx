@@ -3,7 +3,7 @@ import { DialogDemo } from "./components/Dialog/Dialog";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ overflowY: "hidden" }}>
       <div>
         <DialogDemo />
       </div>
@@ -46,10 +46,8 @@ export default function Home() {
             playsInline
             style={{
               position: "absolute",
-              minWidth: "100%",
-              minHeight: "100%",
-              width: "auto",
-              height: "auto",
+              width: "100vw",
+              height: "100vh",
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
@@ -69,7 +67,7 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           gap: 50,
-          fontSize: "4.5rem",
+          fontSize: "4rem",
           width: "100%",
           height: "100%",
           color: "white",
