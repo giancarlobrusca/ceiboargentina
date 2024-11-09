@@ -1,21 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Dots&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) transparent;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: black;
   font-family: Arial, Helvetica, sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  font-family: "Zen Dots", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 60px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8);
 }
