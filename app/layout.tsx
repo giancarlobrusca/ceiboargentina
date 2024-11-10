@@ -17,6 +17,23 @@ export const metadata: Metadata = {
   title: "CEIBO Argentina",
   description:
     "Cambalache y guerra cognitiva. No streaming, televisión sin guita.",
+  openGraph: {
+    type: "website",
+    url: "https://ceiboargentina.net",
+    title: "CEIBO Argentina",
+    description:
+      "Cambalache y guerra cognitiva. No streaming, televisión sin guita.",
+    images:
+      "https://yt3.googleusercontent.com/FThA9lPhGGGjsklxafiR-nvkBt24-QEKpD7s6mZ9yjREqLaq2MLRa7GCCxO2rHnkkhOzGm9JdoA=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CEIBO Argentina",
+    description:
+      "Cambalache y guerra cognitiva. No streaming, televisión sin guita.",
+    images:
+      "https://yt3.googleusercontent.com/FThA9lPhGGGjsklxafiR-nvkBt24-QEKpD7s6mZ9yjREqLaq2MLRa7GCCxO2rHnkkhOzGm9JdoA=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+  },
 };
 
 export default function RootLayout({
