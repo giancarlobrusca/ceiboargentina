@@ -2,14 +2,15 @@ import "./styles.css";
 
 import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { FaBitcoin, FaCopy, FaDonate, FaEthereum } from "react-icons/fa";
+import { FaBitcoin, FaDonate, FaEthereum } from "react-icons/fa";
 import { SiSolana } from "react-icons/si";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { CopyToClipboard } from "../CopyToClipboard/CopyToClipboard";
 
 export const DialogDemo = () => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
       <FaDonate
+        className="hover:text-gray-300"
         style={{
           cursor: "pointer",
           width: 30,
@@ -25,9 +26,7 @@ export const DialogDemo = () => (
     <Dialog.Portal>
       <Dialog.Overlay className="DialogOverlay" />
       <Dialog.Content className="DialogContent">
-        <VisuallyHidden>
-          <Dialog.Title>Donations</Dialog.Title>
-        </VisuallyHidden>
+        <Dialog.Title className="DialogTitle">Contribuí</Dialog.Title>
         <ul
           style={{
             display: "flex",
@@ -36,55 +35,22 @@ export const DialogDemo = () => (
           }}
         >
           <li style={{ display: "flex", alignItems: "center", gap: 20 }}>
-            <FaBitcoin />{" "}
-            <input
-              type="text"
-              value="bc1qrttrlwl5zqtj030dsc00fpz6qr9rltcqxlkydh"
-              style={{
-                width: "80%",
-                border: "1px solid gray",
-                padding: "5px 10px",
-                borderRadius: 20,
-              }}
-              readOnly
+            <CopyToClipboard
+              icon={<FaBitcoin />}
+              text="bc1qrttrlwl5zqtj030dsc00fpz6qr9rltcqxlkydh"
             />
-            <button>
-              <FaCopy />{" "}
-            </button>
           </li>
           <li style={{ display: "flex", alignItems: "center", gap: 20 }}>
-            <FaEthereum />{" "}
-            <input
-              type="text"
-              value="0x91e1B94b3CF5BC626dF16bFf72Fc25AD619379ef"
-              style={{
-                width: "80%",
-                border: "1px solid gray",
-                padding: "5px 10px",
-                borderRadius: 20,
-              }}
-              readOnly
+            <CopyToClipboard
+              icon={<FaEthereum />}
+              text="0x91e1B94b3CF5BC626dF16bFf72Fc25AD619379ef"
             />
-            <button>
-              <FaCopy />{" "}
-            </button>
           </li>
           <li style={{ display: "flex", alignItems: "center", gap: 20 }}>
-            <SiSolana />{" "}
-            <input
-              type="text"
-              value="GEmYWCJNd1t43CsHeg3behzSGntNJ7wVzgSafqLmhMtT"
-              style={{
-                width: "80%",
-                border: "1px solid gray",
-                padding: "5px 10px",
-                borderRadius: 20,
-              }}
-              readOnly
+            <CopyToClipboard
+              icon={<SiSolana />}
+              text="GEmYWCJNd1t43CsHeg3behzSGntNJ7wVzgSafqLmhMtT"
             />
-            <button>
-              <FaCopy />{" "}
-            </button>
           </li>
         </ul>
       </Dialog.Content>
